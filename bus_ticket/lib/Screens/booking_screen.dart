@@ -6,6 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:pattern_formatter/pattern_formatter.dart';
 import 'package:bus_ticket/rounded_button.dart';
 import 'package:bus_ticket/Data/userdatatype.dart';
+import 'screen1.dart';
+import 'package:bus_ticket/seatRow.dart';
 
 // import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
 
@@ -20,10 +22,12 @@ class _BookingScreenState extends State<BookingScreen> {
   // Map<int, UserDetails> mp = new Map();
   // Map<PKey, UserDetails> mp = new Map();
   Map<String, List<UserDetails>> mp = new Map();
+  // List<List<String>> lst = new List(4);
   String name = "Enter your name";
   String mobileNumber = "9999999999";
   String date = "01/01/2022";
-  String seatNo = "2";
+  int seat=0;
+  String seatNo ='';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,12 +85,22 @@ class _BookingScreenState extends State<BookingScreen> {
                 print(date);
               },
             ),
+            TextField(
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.black),
+              decoration:
+                  kTextFieldDecoration.copyWith(hintText: "Enter the SeatNo"),
+              onChanged: (value) {
+                seatNo = value;
+                print(name);
+              },
+            ),
             RoundedButton(
                 name: "Book",
                 color: Colors.blueAccent,
                 onPressed: () {
-                  UserDetails user = new UserDetails();
-                  // new UserDetails(name, date, mobileNumber);
+                  
+                  UserDetails user = new UserDetails(name, date, mobileNumber);
                   user.name = name;
                   user.date = date;
                   user.mobileNo = mobileNumber;
@@ -107,6 +121,13 @@ class _BookingScreenState extends State<BookingScreen> {
                   for (String d in mp.keys) {
                     print("the key is $d");
                   }
+                  // for (List lt in mp.values) {
+                  //   for (UserDetails us in lt) {
+                  //     print(us.name);
+                  //     print(us.date);
+                  //   }
+                  // }
+                  // print(lt);
                 },
                 enable: true)
           ],

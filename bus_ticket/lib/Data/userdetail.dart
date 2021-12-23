@@ -13,5 +13,5 @@ void StoreData(
   } else if (lt == null) {
     print("userdata is false");
   } else
-    mp[seatNo]?.add(lt);
+    mp[seatNo] =  [lt];
 }

@@ -4,7 +4,7 @@ class SeatRow extends StatelessWidget {
   SeatRow({required this.label});
 
   final int label;
-  
+  int id=0;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,22 +12,30 @@ class SeatRow extends StatelessWidget {
       children: [
         Text(label.toString()),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            id = label;
+          },          
           icon: Icon(Icons.stop_outlined),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            id = label+1;
+          },
           icon: Icon(Icons.stop_outlined),
         ),
         SizedBox(
           width: 30,
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            id = label + 2;
+          },
           icon: Icon(Icons.stop_outlined),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            id = label + 1;
+          },
           icon: Icon(Icons.stop_outlined),
         ),
       ],

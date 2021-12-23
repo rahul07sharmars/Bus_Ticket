@@ -6,13 +6,13 @@ class UserDetails {
   var date;
   var mobileNo;
   // var gender;
-  // UserDetails(var name, var mobileNo, var date) {
-  //   this.name = name;
-  //   // date = this.date;
-  //   this.date = date;
-  //   this.mobileNo =mobileNo;
-  //   // gender = this.gender;
-  // }
+  UserDetails(var name, var mobileNo, var date) {
+    this.name = name;
+    // date = this.date;
+    this.date = date;
+    this.mobileNo =mobileNo;
+    // gender = this.gender;
+  }
 }
 
 // class PKey {

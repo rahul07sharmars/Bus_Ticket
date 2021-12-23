@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:bus_ticket/rounded_button.dart';
 import 'package:bus_ticket/constant.dart';
+import 'package:bus_ticket/Data/userdatatype.dart';
+import 'package:bus_ticket/Data/userdetail.dart';
+import 'booking_screen.dart';
 
 class Screen2 extends StatelessWidget {
   const Screen2({Key? key}) : super(key: key);
@@ -18,7 +21,9 @@ class Screen2 extends StatelessWidget {
           RoundedButton(
               name: "Bookings",
               color: Colors.blueAccent,
-              onPressed: () {},
+              onPressed: () {
+                // BookingScreen
+              },
               enable: true),
           RoundedButton(
               name: "Tracking",
