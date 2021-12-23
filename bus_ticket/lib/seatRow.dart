@@ -4,7 +4,7 @@ class SeatRow extends StatelessWidget {
   SeatRow({required this.label});
 
   final int label;
-
+  
   @override
   Widget build(BuildContext context) {
     return Row(
